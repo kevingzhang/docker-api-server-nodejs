@@ -38,6 +38,7 @@ var docker = new Docker({socketPath: '/var/run/docker.sock'});
 function getDockerInfo(call, callback) {
   console.log(`Incoming request getDockerInfo path:${call.request.path}`);
   docker.info((err, info)=>{
+    console.log("after docker.info()", info);
     if(call.request.path){
       callback(null, {info: info[path]});
     }else{
@@ -50,6 +51,7 @@ function getDockerInfo(call, callback) {
 function getDockerImages(call, callback){
   console.log(`Incoming request getDockerImages req:${call.request.req}`);
   docker.listImages((err, data)=>{
+    console.log("after docker.listImages,", data);
     callback(null, {images:data})
   })
   
