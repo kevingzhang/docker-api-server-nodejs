@@ -8,7 +8,7 @@
     "google-protobuf": "^3.0.0",
     "grpc": "^1.11.0",
     "lodash": "^4.6.1",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.3"
   },
   "scripts": {
     "start": "node ./src/server.js"
